@@ -1,0 +1,30 @@
+<footer class="menu-footer">
+  <div class="menu-footer__content" appReveal>
+    @for (promotion of promotions(); track promotion.id) {
+      <article class="menu-footer__promo">
+        <span class="menu-footer__ornament" aria-hidden="true">✦</span>
+        <h2 class="menu-footer__promo-title">{{ promotion.title }}</h2>
+        <p class="menu-footer__promo-description">{{ promotion.description }}</p>
+      </article>
+    }
+
+    @if (notes().length) {
+      <ul class="menu-footer__notes">
+        @for (note of notes(); track note) {
+          <li>{{ note }}</li>
+        }
+      </ul>
+    }
+
+    @if (allergyNotice()) {
+      <p class="menu-footer__allergy">{{ allergyNotice() }}</p>
+    }
+
+    <p class="menu-footer__meta">
+      @if (updatedLabel()) {
+        <span>Menú actualizado el {{ updatedLabel() }}</span>
+      }
+      <span>© {{ currentYear }} {{ name() }}</span>
+    </p>
+  </div>
+</footer>

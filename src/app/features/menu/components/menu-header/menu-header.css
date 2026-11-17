@@ -1,0 +1,168 @@
+/*
+ * Secuencia de entrada (aprox.):
+ * 0.1s cortina sube → 0.5s marco → 0.6s logo se escribe →
+ * 1.3s bajada letra por letra → 1.9s línea → 2.1s "Il Menù" → 2.4s indicador de scroll
+ */
+
+.menu-header {
+  position: relative;
+  min-height: 88vh; /* iOS anteriores a 15.4 no entienden svh */
+  min-height: 88svh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-xl) var(--space-md) var(--space-2xl);
+  overflow: hidden;
+  text-align: center;
+  background: var(--color-paper);
+}
+
+.menu-header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/*
+ * Cortina negra a pantalla completa que se levanta al entrar.
+ * Es fixed para tapar toda la pantalla (no solo el header) y coincide con el
+ * fondo negro de index.html: desde el primer instante se ve negro, sin destellos.
+ */
+.menu-header__curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--color-ink);
+  transform-origin: top;
+  animation: curtain-up 0.9s cubic-bezier(0.76, 0, 0.24, 1) 0.1s both;
+  pointer-events: none;
+}
+
+/* Marco fino (se dibuja después de que sube la cortina) */
+.menu-header__frame {
+  inset: var(--page-gutter);
+  --frame-delay: 0.5s;
+}
+
+/* El logo se "escribe" de izquierda a derecha */
+.menu-header__brand {
+  margin: 0;
+  animation: logo-write 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.6s both;
+}
+
+.menu-header__logo {
+  width: min(78vw, 360px);
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.menu-header__tagline {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+}
+
+.menu-header__letter {
+  display: inline-block;
+  white-space: pre;
+  animation: letter-in 0.7s var(--ease-elegant) both;
+  animation-delay: calc(1.3s + var(--letter-index) * 30ms);
+}
+
+.menu-header__rule {
+  width: 64px;
+  height: 1px;
+  background: var(--color-ink);
+  animation: rule-grow 1s var(--ease-elegant) 1.9s both;
+}
+
+.menu-header__eyebrow {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.6rem;
+  animation: fade-up 1s var(--ease-elegant) 2.1s both;
+}
+
+.menu-header__scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-lg);
+  width: 1px;
+  height: 48px;
+  background: var(--color-line);
+  overflow: hidden;
+  animation: fade-up 1s var(--ease-elegant) 2.4s both;
+}
+
+.menu-header__scroll-cue::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-ink);
+  animation: scroll-cue 2.2s var(--ease-elegant) 3s infinite;
+}
+
+/* Al bajar, el contenido se desvanece y se aleja (solo navegadores que lo soportan) */
+@supports (animation-timeline: scroll()) {
+  .menu-header__content {
+    animation: header-scroll-out linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 70svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-header__content {
+    animation: none;
+  }
+}
+
+@keyframes curtain-up {
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes logo-write {
+  from {
+    clip-path: inset(0 100% 0 0);
+    transform: translateY(8px);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes letter-in {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(0.6em);
+  }
+}
+
+@keyframes rule-grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  60%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes header-scroll-out {
+  to {
+    opacity: 0;
+    transform: translateY(-48px) scale(0.94);
+  }
+}

@@ -1,0 +1,16 @@
+:host {
+  --frame-delay: 0.15s;
+
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--color-frame);
+  pointer-events: none;
+  animation: frame-draw 1.3s var(--ease-elegant) var(--frame-delay) both;
+}
+
+@keyframes frame-draw {
+  from {
+    clip-path: inset(0 50% 0 50%);
+    opacity: 0;
+  }
+}

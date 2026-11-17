@@ -1,0 +1,13 @@
+<div class="filters" role="group" aria-label="Filtrar por dieta">
+  @for (tag of tags(); track tag) {
+    <button
+      type="button"
+      class="filters__chip"
+      [class.is-selected]="isSelected(tag)"
+      [attr.aria-pressed]="isSelected(tag)"
+      (click)="toggle(tag)"
+    >
+      {{ labels[tag] }}
+    </button>
+  }
+</div>

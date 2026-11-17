@@ -1,0 +1,28 @@
+<section class="results" aria-live="polite">
+  @if (total() > 0) {
+    <p class="results__summary">
+      {{ total() }} {{ total() === 1 ? 'resultado' : 'resultados' }} para
+      <em>“{{ query() }}”</em>
+    </p>
+
+    @for (group of groups(); track group.category.id) {
+      <div class="results__group">
+        <h2 class="results__category">{{ group.category.name }}</h2>
+        <ul class="results__items">
+          @for (item of group.items; track item.id) {
+            <li>
+              <app-menu-item [item]="item" (selected)="select($event, group)" />
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  } @else {
+    <div class="results__empty">
+      <p class="results__empty-title">Sin resultados</p>
+      <p class="results__empty-hint">
+        No encontramos nada para <em>“{{ query() }}”</em>. Probá con otra palabra.
+      </p>
+    </div>
+  }
+</section>

@@ -1,0 +1,9 @@
+@if (!isAvailable()) {
+  <span class="item-price__status">Sin stock</span>
+} @else if (hasPrices()) {
+  @for (price of item().prices; track $index) {
+    <span>{{ price.amount | arPrice }}</span>
+  }
+} @else {
+  <span class="item-price__status">Consultar</span>
+}

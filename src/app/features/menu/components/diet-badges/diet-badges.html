@@ -1,0 +1,7 @@
+@if (labels().length) {
+  <ul class="badges">
+    @for (label of labels(); track label) {
+      <li class="badges__item">{{ label }}</li>
+    }
+  </ul>
+}

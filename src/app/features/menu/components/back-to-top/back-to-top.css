@@ -1,0 +1,31 @@
+.back-to-top {
+  position: fixed;
+  right: var(--space-md);
+  bottom: calc(var(--space-md) + env(safe-area-inset-bottom));
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--color-paper);
+  border-radius: 50%;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition:
+    opacity var(--duration-base) var(--ease-elegant),
+    transform var(--duration-base) var(--ease-elegant);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.back-to-top:active {
+  transform: scale(0.94);
+}

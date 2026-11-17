@@ -1,0 +1,109 @@
+.item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: var(--space-md);
+  align-items: start;
+  width: 100%;
+  padding: var(--space-md) 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    opacity var(--duration-base) ease,
+    transform var(--duration-fast) ease;
+}
+
+.item:active {
+  transform: scale(0.985);
+}
+
+.item:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 4px;
+}
+
+.item__image {
+  transition: transform var(--duration-base) var(--ease-elegant);
+}
+
+/* Solo con mouse: en pantallas táctiles el hover queda "pegado" después de tocar */
+@media (hover: hover) {
+  .item:hover .item__image {
+    transform: scale(1.04);
+  }
+}
+
+.item__body {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.item__heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.item__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.item__leader {
+  flex: 1;
+  min-width: var(--space-sm);
+  border-bottom: 1px dotted var(--color-line-strong);
+  transform: translateY(-0.3em);
+}
+
+.item__price {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.item__badge {
+  justify-self: start;
+  margin: 0.15rem 0;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--color-ink);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.item__badge::before {
+  content: '✦ ';
+}
+
+.item__description,
+.item__variants {
+  color: var(--color-muted);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+/* En el listado se ven dos líneas; el texto completo está en el modal */
+.item__description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.item__variants {
+  font-style: italic;
+}
+
+.item--unavailable {
+  opacity: 0.4;
+}
+
+.item--unavailable .item__name {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}

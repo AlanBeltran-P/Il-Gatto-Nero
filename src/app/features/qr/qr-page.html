@@ -1,0 +1,49 @@
+<main class="qr-page">
+  <section class="qr-card" aria-label="Código QR del menú">
+    <app-thin-frame class="qr-card__frame" />
+
+    <img
+      class="qr-card__logo logo-on-light"
+      [src]="logoUrl"
+      alt="Il Gatto Nero"
+      width="1080"
+      height="1080"
+    />
+    <p class="qr-card__tagline">{{ tagline }}</p>
+    <span class="qr-card__rule" aria-hidden="true"></span>
+
+    <qrcode
+      class="qr-card__code"
+      [qrdata]="menuUrl"
+      [width]="qrSize"
+      [margin]="1"
+      errorCorrectionLevel="M"
+      elementType="canvas"
+      colorDark="#0d0d0d"
+      colorLight="#ffffff"
+      ariaLabel="Código QR para ver el menú"
+      (qrCodeURL)="downloadUrl.set($event)"
+    />
+
+    <p class="qr-card__cta">Escaneá para ver la carta</p>
+    <p class="qr-card__url">{{ displayUrl }}</p>
+  </section>
+
+  @if (isLocal) {
+    <p class="qr-page__warning" role="note">
+      Este QR apunta a <strong>{{ menuUrl }}</strong>, que solo funciona en esta computadora.
+      Antes de imprimirlo, configurá <code>publicUrl</code> en
+      <code>src/app/core/config/site.config.ts</code> o abrí esta página desde el sitio publicado.
+    </p>
+  }
+
+  <div class="qr-page__actions">
+    <button type="button" class="qr-page__button qr-page__button--primary" (click)="print()">
+      Imprimir
+    </button>
+    @if (downloadUrl(); as url) {
+      <a class="qr-page__button" [href]="url" download="il-gatto-nero-qr.png">Descargar PNG</a>
+    }
+    <a class="qr-page__button" routerLink="/">Ver el menú</a>
+  </div>
+</main>

@@ -1,0 +1,84 @@
+<!-- El header no depende del JSON: se muestra (y anima) apenas abre la página -->
+<app-menu-header [name]="siteName" />
+
+@if (menu(); as data) {
+  <app-category-nav
+    [categories]="data.categories"
+    [activeId]="isSearching() ? '' : (selectedCategory()?.id ?? '')"
+    (categorySelected)="selectCategory($event)"
+  />
+
+  <main id="menu-content" class="menu-page" role="tabpanel" #content>
+    <app-thin-frame class="menu-page__frame" />
+
+    <div class="menu-page__tools">
+      <app-search-box [(query)]="searchQuery" />
+      @if (availableTags().length) {
+        <app-diet-filters [tags]="availableTags()" [(selected)]="activeTags" />
+      }
+    </div>
+
+    @if (isSearching()) {
+      <app-search-results
+        [groups]="searchResults()"
+        [query]="searchQuery()"
+        (itemSelected)="openEntry($event)"
+      />
+    } @else {
+      <div
+        class="menu-page__swipe-area"
+        appSwipe
+        (swipeLeft)="goToNextCategory()"
+        (swipeRight)="goToPreviousCategory()"
+      >
+        @for (category of visibleCategories(); track category.id) {
+          <app-category-section
+            class="menu-page__category"
+            [class.menu-page__category--from-next]="enterDirection() === 'from-next'"
+            [class.menu-page__category--from-previous]="enterDirection() === 'from-previous'"
+            [category]="category"
+            [position]="selectedPosition()"
+            (itemSelected)="openItem($event)"
+          />
+        }
+
+        <app-category-pager
+          [previous]="previousCategory()"
+          [next]="nextCategory()"
+          (previousSelected)="goToPreviousCategory()"
+          (nextSelected)="goToNextCategory()"
+        />
+      </div>
+    }
+  </main>
+
+  <app-menu-footer
+    [name]="data.local.name"
+    [promotions]="data.promotions"
+    [notes]="data.notes"
+    [allergyNotice]="data.allergyNotice"
+    [updatedAt]="data.updatedAt"
+  />
+
+  <app-back-to-top [visible]="showBackToTop()" />
+
+  @if (selectedEntry(); as entry) {
+    <app-product-modal
+      [item]="entry.item"
+      [categoryName]="entry.categoryName"
+      [pairings]="selectedPairings()"
+      (pairingSelected)="openEntry($event)"
+      (closed)="closeEntry()"
+    />
+  }
+} @else if (menu() === null) {
+  <div class="menu-page__status" role="alert">
+    <p>No pudimos cargar el menú.</p>
+    <p class="menu-page__status-hint">Probá recargar la página.</p>
+  </div>
+} @else {
+  <div class="menu-page__loading" aria-live="polite">
+    <span class="visually-hidden">Cargando la carta</span>
+    <span class="menu-page__loading-line" aria-hidden="true"></span>
+  </div>
+}

@@ -1,0 +1,117 @@
+/*
+ * La hoja del menú: columna centrada (mismo ancho que el footer),
+ * blanca y con sombra sobre el fondo gris de la página.
+ */
+.menu-page {
+  position: relative;
+  width: var(--column-width);
+  min-height: 60svh;
+  margin: var(--page-gutter) auto 0;
+  padding: var(--space-sm) calc(var(--space-sm) + var(--space-md));
+  background: var(--color-paper);
+  box-shadow: var(--shadow-paper);
+  scroll-margin-top: calc(var(--nav-height) + var(--page-gutter));
+}
+
+/* Marco fino dentro de la hoja. Está en <main>, que no cambia: queda fijo entre categorías */
+.menu-page__frame {
+  inset: var(--space-sm);
+}
+
+/* Buscador y filtros, arriba de la categoría */
+.menu-page__tools {
+  position: relative;
+  display: grid;
+  gap: var(--space-sm);
+  padding-top: var(--space-lg);
+}
+
+/* touch-action: el navegador sigue manejando el scroll vertical; el horizontal lo usamos para deslizar */
+.menu-page__swipe-area {
+  touch-action: pan-y;
+}
+
+/* Al cambiar de pestaña solo se anima el contenido de adentro */
+.menu-page__category {
+  display: block;
+  animation: fade-up 0.6s var(--ease-elegant) both;
+}
+
+/* La categoría entra desde el lado hacia el que se avanzó */
+.menu-page__category--from-next {
+  animation-name: slide-from-right;
+}
+
+.menu-page__category--from-previous {
+  animation-name: slide-from-left;
+}
+
+@keyframes slide-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+}
+
+.menu-page__status {
+  min-height: 40svh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.menu-page__status p {
+  margin: 0;
+}
+
+.menu-page__status-hint {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* Mientras llega la carta: una línea fina que va y viene, debajo del header */
+.menu-page__loading {
+  display: grid;
+  place-items: center;
+  min-height: 40svh;
+}
+
+.menu-page__loading-line {
+  position: relative;
+  width: 64px;
+  height: 1px;
+  overflow: hidden;
+  background: var(--color-line);
+}
+
+.menu-page__loading-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-ink);
+  animation: loading-slide 1.4s var(--ease-elegant) infinite;
+}
+
+@keyframes loading-slide {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

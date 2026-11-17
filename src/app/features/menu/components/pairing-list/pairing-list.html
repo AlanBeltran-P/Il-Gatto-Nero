@@ -1,0 +1,11 @@
+<p class="pairings__label">Va bien con</p>
+<ul class="pairings__list">
+  @for (pairing of pairings(); track pairing.item.id) {
+    <li>
+      <button type="button" class="pairings__item" (click)="pairingSelected.emit(pairing)">
+        <span class="pairings__name">{{ pairing.item.name }}</span>
+        <span class="pairings__category">{{ pairing.categoryName }} ›</span>
+      </button>
+    </li>
+  }
+</ul>

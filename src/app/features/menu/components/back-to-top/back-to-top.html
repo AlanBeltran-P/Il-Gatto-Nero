@@ -1,0 +1,12 @@
+<button
+  type="button"
+  class="back-to-top"
+  [class.is-visible]="visible()"
+  [attr.tabindex]="visible() ? null : -1"
+  aria-label="Volver arriba"
+  (click)="scrollToTop()"
+>
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.5" />
+  </svg>
+</button>

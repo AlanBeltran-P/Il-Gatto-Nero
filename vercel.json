@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/il-gatto-nero/browser",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.csr.html" }]
+}

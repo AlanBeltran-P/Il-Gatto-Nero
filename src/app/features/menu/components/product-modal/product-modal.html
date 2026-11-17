@@ -1,0 +1,67 @@
+<dialog
+  #dialog
+  class="modal"
+  [class.is-entered]="isEntered()"
+  [class.is-closing]="isClosing()"
+  aria-labelledby="product-modal-title"
+  (cancel)="onCancel($event)"
+  (click)="onDialogClick($event)"
+>
+  <article class="modal__panel" #panel>
+    <button type="button" class="modal__close" aria-label="Cerrar" (click)="requestClose()">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+    </button>
+
+    <!--
+      Lista de un solo elemento trackeada por id: al tocar un maridaje cambia el producto,
+      el contenido se recrea y vuelve a entrar con su animación.
+    -->
+    @for (current of [item()]; track current.id) {
+      <app-product-image size="large" [src]="current.image" [name]="current.name" />
+
+      <div class="modal__body">
+        @if (categoryName()) {
+          <p class="modal__eyebrow">{{ categoryName() }}</p>
+        }
+
+        <h2 id="product-modal-title" class="modal__title">{{ current.name }}</h2>
+
+        @if (current.badge) {
+          <p class="modal__badge">{{ current.badge }}</p>
+        }
+
+        @if (current.tags?.length) {
+          <app-diet-badges [tags]="current.tags ?? []" />
+        }
+
+        <span class="modal__ornament" aria-hidden="true"><span class="modal__diamond"></span></span>
+
+        @if (current.description) {
+          <p class="modal__description">{{ current.description }}</p>
+        }
+
+        @if (current.variants?.length) {
+          <div class="modal__variants">
+            <p class="modal__label">Variedades</p>
+            <ul>
+              @for (variant of current.variants; track variant) {
+                <li>{{ variant }}</li>
+              }
+            </ul>
+          </div>
+        }
+
+        @if (pairings().length) {
+          <app-pairing-list [pairings]="pairings()" (pairingSelected)="pairingSelected.emit($event)" />
+        }
+
+        <div class="modal__footer" [class.modal__footer--unavailable]="!isAvailable()">
+          <span class="modal__label">Precio</span>
+          <app-item-price class="modal__price" [item]="current" />
+        </div>
+      </div>
+    }
+  </article>
+</dialog>

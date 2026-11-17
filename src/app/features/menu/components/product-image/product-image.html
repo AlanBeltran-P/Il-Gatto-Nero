@@ -1,0 +1,21 @@
+@if (showPhoto()) {
+  <img
+    class="product-image__photo"
+    [class.is-loaded]="isLoaded()"
+    [src]="src()"
+    [alt]="altText()"
+    loading="lazy"
+    decoding="async"
+    (load)="isLoaded.set(true)"
+    (error)="hasFailed.set(true)"
+  />
+} @else {
+  <div
+    class="product-image__placeholder"
+    [attr.role]="decorative() ? null : 'img'"
+    [attr.aria-label]="decorative() ? null : name()"
+    [attr.aria-hidden]="decorative() ? 'true' : null"
+  >
+    <span class="product-image__initial">{{ initial() }}</span>
+  </div>
+}

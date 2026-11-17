@@ -1,0 +1,33 @@
+<button
+  type="button"
+  class="item"
+  [class.item--unavailable]="!isAvailable()"
+  aria-haspopup="dialog"
+  (click)="selected.emit(item())"
+>
+  <app-product-image class="item__image" [src]="item().image" [name]="item().name" decorative />
+
+  <span class="item__body">
+    <span class="item__heading">
+      <span class="item__name">{{ item().name }}</span>
+      <span class="item__leader" aria-hidden="true"></span>
+      <app-item-price class="item__price" [item]="item()" />
+    </span>
+
+    @if (item().badge) {
+      <span class="item__badge">{{ item().badge }}</span>
+    }
+
+    @if (item().tags?.length) {
+      <app-diet-badges [tags]="item().tags ?? []" />
+    }
+
+    @if (item().description) {
+      <span class="item__description">{{ item().description }}</span>
+    }
+
+    @if (variantsText()) {
+      <span class="item__variants">{{ variantsText() }}</span>
+    }
+  </span>
+</button>

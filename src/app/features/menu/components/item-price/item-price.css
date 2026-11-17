@@ -1,0 +1,13 @@
+:host {
+  display: inline-flex;
+  gap: var(--space-sm);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+.item-price__status {
+  font-size: 0.65em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}

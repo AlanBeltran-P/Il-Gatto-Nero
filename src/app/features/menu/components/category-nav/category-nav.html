@@ -1,0 +1,20 @@
+<nav class="category-nav" aria-label="Categorías del menú">
+  <ul class="category-nav__track" role="tablist" #track>
+    @for (category of categories(); track category.id) {
+      <li role="presentation">
+        <button
+          type="button"
+          role="tab"
+          class="category-nav__link"
+          [class.is-active]="category.id === activeId()"
+          [attr.aria-selected]="category.id === activeId()"
+          [attr.data-id]="category.id"
+          aria-controls="menu-content"
+          (click)="categorySelected.emit(category.id)"
+        >
+          {{ category.name }}
+        </button>
+      </li>
+    }
+  </ul>
+</nav>

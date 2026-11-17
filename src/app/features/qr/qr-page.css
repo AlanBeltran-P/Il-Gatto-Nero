@@ -1,0 +1,149 @@
+/* Sin encapsulación (ver qr-page.ts): todas las clases empiezan con "qr-" */
+
+.qr-page {
+  min-height: 100svh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl) var(--page-gutter);
+}
+
+/* Tarjeta de mesa: hoja blanca con sombra y marco fino, como el menú */
+.qr-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-sm);
+  width: min(100%, 380px);
+  padding: var(--space-xl) var(--space-lg);
+  background: var(--color-paper);
+  box-shadow: var(--shadow-paper);
+  text-align: center;
+  animation: fade-up 0.8s var(--ease-elegant) both;
+}
+
+/* Doble clase: tiene que ganarle al estilo propio del marco (que pone inset: 0) */
+.qr-card .qr-card__frame {
+  inset: var(--space-sm);
+}
+
+.qr-card__logo {
+  width: 170px;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.qr-card__tagline {
+  margin: 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+}
+
+.qr-card__rule {
+  width: 48px;
+  height: 1px;
+  margin: var(--space-xs) 0;
+  background: var(--color-ink);
+}
+
+.qr-card__code {
+  display: block;
+  width: 220px;
+}
+
+/* El canvas se genera a 1024 px (nítido al imprimir) y se muestra a 220 px */
+.qr-card__code canvas,
+.qr-card__code img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.qr-card__cta {
+  margin: var(--space-sm) 0 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.qr-card__url {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.qr-page__warning {
+  max-width: 380px;
+  margin: 0;
+  padding: var(--space-md);
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.qr-page__warning code {
+  font-size: 0.75rem;
+}
+
+.qr-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.qr-page__button {
+  padding: 0.7rem 1.2rem;
+  border: 1px solid var(--color-ink);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.qr-page__button--primary {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+@media (hover: hover) {
+  .qr-page__button:hover {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+}
+
+/* Al imprimir sale solo la tarjeta, sin sombra ni botones */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .qr-page {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .qr-card {
+    box-shadow: none;
+    animation: none;
+    break-inside: avoid;
+  }
+
+  .qr-page__warning,
+  .qr-page__actions {
+    display: none;
+  }
+}

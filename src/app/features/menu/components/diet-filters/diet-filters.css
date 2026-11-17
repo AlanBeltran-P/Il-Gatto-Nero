@@ -1,0 +1,32 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.filters__chip {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background var(--duration-fast) ease,
+    color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.filters__chip.is-selected {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.filters__chip:focus-visible {
+  outline: 1px solid var(--color-ink);
+  outline-offset: 2px;
+}

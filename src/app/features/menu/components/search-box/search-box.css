@@ -1,0 +1,54 @@
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0 0 var(--space-xs);
+  border-bottom: 1px solid var(--color-line-strong);
+  transition: border-color var(--duration-base) ease;
+}
+
+.search:focus-within {
+  border-color: var(--color-ink);
+}
+
+.search__icon {
+  flex-shrink: 0;
+  color: var(--color-muted);
+}
+
+.search__input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-sm) 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  /* 16px como mínimo: así iOS no hace zoom al tocar el campo */
+  font-size: 1rem;
+  outline: none;
+}
+
+.search__input::placeholder {
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+/* Saca la "x" nativa del input type=search: usamos la nuestra */
+.search__input::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.search__clear {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 50%;
+  background: none;
+  color: var(--color-ink);
+  cursor: pointer;
+  animation: fade-up 0.3s var(--ease-elegant) both;
+}

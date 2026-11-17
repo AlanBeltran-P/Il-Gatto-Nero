@@ -1,0 +1,35 @@
+<section class="category" [id]="category().id" [attr.aria-labelledby]="titleId()">
+  <header class="category__header" appReveal>
+    <span class="category__position">{{ positionLabel() }}</span>
+    <h2 class="category__title" [id]="titleId()">{{ category().name }}</h2>
+    @if (category().note) {
+      <p class="category__note">{{ category().note }}</p>
+    }
+    <span class="category__ornament" aria-hidden="true">
+      <span class="category__diamond"></span>
+    </span>
+  </header>
+
+  @if (category().items.length === 0) {
+    <p class="category__empty">No hay opciones con esos filtros en esta categoría.</p>
+  }
+
+  <ul class="category__items">
+    @for (item of category().items; track item.id; let index = $index) {
+      <li appReveal [style.--reveal-delay]="revealDelay(index)">
+        <app-menu-item [item]="item" (selected)="itemSelected.emit($event)" />
+      </li>
+    }
+  </ul>
+
+  @if (category().extras?.length) {
+    <ul class="category__extras" appReveal>
+      @for (extra of category().extras; track extra.name) {
+        <li class="category__extra">
+          <span>{{ extra.name }}</span>
+          <span>{{ extra.amount | arPrice }}</span>
+        </li>
+      }
+    </ul>
+  }
+</section>

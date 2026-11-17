@@ -1,0 +1,19 @@
+<nav class="pager" aria-label="Cambiar de categoría">
+  @if (previous(); as category) {
+    <button type="button" class="pager__link" (click)="previousSelected.emit()">
+      <span class="pager__label">‹ Anterior</span>
+      <span class="pager__name">{{ category.name }}</span>
+    </button>
+  } @else {
+    <span></span>
+  }
+
+  @if (next(); as category) {
+    <button type="button" class="pager__link pager__link--next" (click)="nextSelected.emit()">
+      <span class="pager__label">Siguiente ›</span>
+      <span class="pager__name">{{ category.name }}</span>
+    </button>
+  }
+</nav>
+
+<p class="pager__hint" aria-hidden="true">También podés deslizar para cambiar de categoría</p>

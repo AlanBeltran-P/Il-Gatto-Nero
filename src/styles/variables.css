@@ -1,0 +1,46 @@
+:root {
+  /* Paleta: solo negro y blanco, con grises derivados */
+  --color-ink: #0d0d0d;
+  --color-paper: #ffffff;
+  --color-canvas: #eeeeec; /* fondo de la página, detrás de la hoja del menú */
+  --color-muted: #6e6e6e;
+  --color-line: rgb(13 13 13 / 0.1);
+  --color-line-strong: rgb(13 13 13 / 0.35);
+  --color-frame: rgb(13 13 13 / 0.18); /* línea fina de los marcos */
+  --color-muted-inverse: rgb(255 255 255 / 0.62);
+  --color-line-inverse: rgb(255 255 255 / 0.18);
+
+  /* Tipografía */
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+
+  /* Espaciados */
+  --space-xs: 0.35rem;
+  --space-sm: 0.6rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+
+  /* Layout: una sola columna para el marco del menú y el footer */
+  --content-max-width: 720px;
+  /* En celulares con muesca (en horizontal) respeta la zona segura de los costados */
+  --page-gutter: max(var(--space-sm), env(safe-area-inset-left), env(safe-area-inset-right));
+  --column-width: min(var(--content-max-width), 100% - 2 * var(--page-gutter));
+  --nav-height: 56px;
+
+  /* Sombra en capas: la hoja del menú parece apoyada sobre el fondo */
+  --shadow-paper:
+    0 1px 2px rgb(0 0 0 / 0.05),
+    0 8px 20px -8px rgb(0 0 0 / 0.14),
+    0 28px 60px -24px rgb(0 0 0 / 0.28);
+
+  /* Movimiento */
+  --ease-elegant: cubic-bezier(0.22, 0.61, 0.21, 1);
+  /* Curva pareja para paneles que suben: el movimiento se reparte en toda la duración */
+  --ease-sheet: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.45s;
+  --duration-slow: 0.9s;
+}

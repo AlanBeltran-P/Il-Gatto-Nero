@@ -1,0 +1,275 @@
+{
+  "local": {
+    "name": "Il Gatto Nero",
+    "logo": "/images/logo.webp",
+    "city": "",
+    "instagram": "",
+    "theme": {
+      "primary": "#111111",
+      "accent": "#B8862B"
+    }
+  },
+  "updatedAt": "2026-11-17",
+  "notes": [
+    "Valor cubierto $3.500",
+    "Efectivo 15% off"
+  ],
+  "promotions": [
+    {
+      "id": "efectivo-15",
+      "title": "15% off en efectivo",
+      "description": "Abonando en efectivo tenés un 15% de descuento."
+    }
+  ],
+  "allergyNotice": "En Il Gatto Nero trabajamos con ingredientes frescos y elaboraciones artesanales. Algunos de nuestros platos pueden contener o haber estado en contacto con alérgenos como gluten, lácteos, huevo, frutos secos, pescado, mariscos, soja, sulfitos u otros derivados. Si tenés alguna alergia, intolerancia o restricción alimentaria, por favor informalo a nuestro equipo antes de realizar tu pedido. Haremos todo lo posible para orientarte, aunque no podemos garantizar la ausencia total de trazas debido al uso compartido de espacios, utensilios y equipamiento en cocina. Siguiendo recomendaciones sanitarias oficiales, se recomienda evitar el consumo de carne picada o preparaciones con carne picada insuficientemente cocidas en menores de 5 años, como medida de prevención del Síndrome Urémico Hemolítico. Asimismo, se recomienda no ofrecer miel ni alimentos que la contengan a bebés menores de 1 año, debido al riesgo de botulismo del lactante.",
+  "categories": [
+    {
+      "id": "antipasti",
+      "name": "Antipasti",
+      "items": [
+        { "id": "carpaccio-estacion", "name": "Carpaccio de estación", "description": "Stracciatella, jamón crudo, limón, pimienta negra, AOVE.", "prices": [{ "amount": 32000 }] },
+        { "id": "polpette-al-sugo", "name": "Polpette al sugo", "description": "Albóndigas blend de carne roastbeef vacuno y bondiola de cerdo, pomodoro San Marzano, parmesano 16 meses, pimienta negra, albahaca.", "prices": [{ "amount": 35000 }] },
+        { "id": "langostinos-al-brandy", "name": "Langostinos al brandy", "description": "Langostinos, lechuga morada, salsa cocktail al brandy, sal, alcaparras.", "prices": [{ "amount": 35000 }] },
+        { "id": "vitello-tonnato-antipasto", "name": "Vitello tonnato", "description": "Carne de ternera, crema tonnata, alcaparras, alcaparrones, AOVE.", "prices": [{ "amount": 36000 }] },
+        { "id": "melanzane-al-funghetto", "name": "Melanzane al funghetto", "description": "Berenjenas, pomodoro San Marzano, ajo, albahaca, pimienta negra, parmesano 16 meses.", "prices": [{ "amount": 25000 }] },
+        { "id": "ensalada-verde", "name": "Ensalada verde", "description": "Rúcula, tomates cherry confitados, parmesano 16 meses, pimienta negra, AOVE.", "prices": [{ "amount": 24000 }] },
+        { "id": "panozzo-parma", "name": "Panozzo Parma", "description": "Para compartir. Masa 48 horas de fermentación, stracciatella, rúcula, jamón crudo, tomates cherry confitados, AOVE.", "prices": [{ "amount": 48000 }] },
+        { "id": "panozzo-mortazza", "name": "Panozzo Mortazza", "description": "Para compartir. Masa 48 horas de fermentación, stracciatella, pesto de pistacho, mortadella con pistacchio, AOVE.", "prices": [{ "amount": 48000 }] },
+        { "id": "panozzo-melanzane", "name": "Panozzo Melanzane", "description": "Para compartir. Masa 48 horas de fermentación, fonduta de cebolla, berenjenas fritas, rúcula, tomates cherry confitados, AOVE.", "prices": [{ "amount": 38000 }] },
+        { "id": "panera-focaccia", "name": "Panera de focaccia & AOVE arbequina", "prices": [{ "amount": 6000 }] }
+      ],
+      "extras": [
+        { "name": "Adicional focaccia", "amount": 4000 }
+      ]
+    },
+    {
+      "id": "pizze",
+      "name": "Le Nostre Pizze",
+      "note": "Todas nuestras pizzas se elaboran con harina 100% italiana.",
+      "items": [
+        { "id": "pizza-margherita", "name": "Margherita", "description": "Pomodoro italiano San Marzano, mozzarella fior di latte, albahaca, AOVE.", "prices": [{ "amount": 33000 }] },
+        { "id": "pizza-marinara-speciale", "name": "Marinara speciale", "description": "Pomodoro italiano San Marzano, stracciatella, anchoas, sal de alcaparras, orégano fresco, AOVE.", "prices": [{ "amount": 36000 }] },
+        { "id": "pizza-pepperoni", "name": "Pepperoni", "description": "Pomodoro italiano San Marzano, mozzarella fior di latte, salame pepperoni, albahaca, miel orgánica picante.", "prices": [{ "amount": 40000 }] },
+        { "id": "pizza-prosciutto-cotto", "name": "Prosciutto cotto", "description": "Pomodoro italiano San Marzano, mozzarella fior di latte, jamón natural, morrones asados en horno a leña, crema de morrones, ajo, orégano fresco, AOVE.", "prices": [{ "amount": 44000 }] },
+        { "id": "pizza-parma", "name": "Parma", "description": "Pomodoro italiano San Marzano, mozzarella fior di latte, rúcula, jamón crudo, parmesano 16 meses, tomates cherry confitados, AOVE.", "prices": [{ "amount": 48000 }] },
+        { "id": "pizza-funghi-gorgonzola", "name": "Funghi gorgonzola", "description": "Pomodoro italiano San Marzano, queso gorgonzola, hongos de estación, panceta, tomates cherry confitados, albahaca, AOVE.", "prices": [{ "amount": 48000 }] },
+        { "id": "pizza-melanzane", "name": "Melanzane", "description": "Pomodoro italiano San Marzano, berenjenas fritas, tomates cherry confitados, albahaca, parmesano 16 meses, AOVE.", "prices": [{ "amount": 38000 }] },
+        { "id": "pizza-capriciosa", "name": "Capriciosa", "description": "Pomodoro italiano San Marzano, mozzarella fior di latte, jamón natural, alcachofas, aceitunas negras, pesto de ajo y perejil, albahaca, AOVE.", "prices": [{ "amount": 48000 }] },
+        { "id": "pizza-cipolla-del-futuro", "name": "Cipolla del futuro", "description": "Base bianca, mozzarella fior di latte, provola ahumada, 4 facetas de la cebolla, peperoncino, AOVE.", "prices": [{ "amount": 44000 }] },
+        { "id": "pizza-zucca", "name": "Zucca", "description": "Crema de calabaza cabutia, mozzarella fior di latte, chips de berenjenas fritas, jamón crudo, parmesano 16 meses, fonduta de cebollas.", "prices": [{ "amount": 48000 }] },
+        { "id": "pizza-mortadella-pistacchio", "name": "Mortadella con pistacchio", "description": "Base bianca, pesto de pistacho, mozzarella fior di latte, mortadella, pistacchio, parmesano 16 meses, albahaca, AOVE arbequina.", "prices": [{ "amount": 52000 }] },
+        { "id": "pizza-carbonara", "name": "Carbonara", "badge": "Ganadora 1º Premio Oro Campeonato Mundial APYCE 2024", "description": "Base bianca, mozzarella fior di latte, crema carbonara (emulsión de queso pecorino y yemas de huevo orgánicos pasteurizados), panceta ahumada, pecorino romano DOP.", "prices": [{ "amount": 49000 }] },
+        { "id": "pizza-nerano", "name": "Nerano", "description": "Base crema de zucchini, mozzarella fior di latte, langostinos, chips de zucchini, crema de langostinos, limón, pimienta negra, AOVE arbequina.", "prices": [{ "amount": 48500 }] },
+        { "id": "pizza-4-formaggi", "name": "4 Formaggi", "description": "Crema gorgonzola, mozzarella fior di latte, provola ahumada, parmesano 16 meses, pecorino romano DOP, nueces Chandler, miel orgánica.", "prices": [{ "amount": 45000 }] },
+        { "id": "pizza-vitello-tonnato", "name": "Vitello tonnato", "description": "Base bianca, mozzarella fior di latte, carne de ternera, crema tonnata, alcaparras.", "prices": [{ "amount": 52000 }] },
+        { "id": "pizza-tartufata", "name": "Tartufata", "description": "Crema de trufa & hongos porcini italiana, mozzarella fior di latte, setas de cardo agroecológicas, panceta ahumada, pecorino romano DOP.", "prices": [{ "amount": 53500 }] }
+      ]
+    },
+    {
+      "id": "pasta-artigianale",
+      "name": "Pasta Artigianale",
+      "note": "Todas nuestras pastas se elaboran por nosotros de forma artesanal a mano con sémola de trigo candeal decorticado a piedra 100% natural certificado.",
+      "items": [
+        { "id": "cavatelli-nerano", "name": "Cavatelli Nerano", "description": "Crema de zucchini, langostinos, limón, pimienta negra, menta, parmesano 16 meses.", "prices": [{ "amount": 36000 }] },
+        { "id": "cavatelli-tartufo", "name": "Cavatelli Tartufo", "description": "Hongos de estación, crema de trufas italianas, trufas en escamas, pimienta negra, parmesano 16 meses.", "prices": [{ "amount": 46000 }] },
+        { "id": "cavatelli-al-ragu", "name": "Cavatelli al ragú", "badge": "Ganadora 1º Premio Oro Campeonato Nacional Pasta 2025", "description": "Ragú clásico, blend de carne roastbeef vacuno & bondiola de cerdo, pimienta negra, parmesano 16 meses.", "prices": [{ "amount": 36000 }] },
+        { "id": "annolini-azafran-limon", "name": "Annolini al azafrán y limón", "description": "Pasta rellena de ricotta pugliese, papas y pecorino, crema de azafrán y limón, parmesano 16 meses, pimienta negra.", "prices": [{ "amount": 40000 }] },
+        { "id": "annolini-al-ragu", "name": "Annolini al ragú", "description": "Pasta rellena de ricotta pugliese, papas y pecorino, acompañada de ragú clásico, blend de carne roastbeef vacuno & bondiola de cerdo, pimienta negra, parmesano 16 meses.", "prices": [{ "amount": 42000 }] }
+      ]
+    },
+    {
+      "id": "dolci",
+      "name": "Dolci",
+      "items": [
+        { "id": "tiramisu", "name": "Tiramisú", "description": "Vainillas, crema mascarpone, doppio espresso, cacao amargo.", "prices": [{ "amount": 25000 }] },
+        { "id": "cannoli-duo", "name": "Cannoli dúo", "description": "Masa siciliana, crema de avellanas, caramelo salado, azúcar impalpable, avellanas tostadas.", "prices": [{ "amount": 25000 }] },
+        { "id": "seada", "name": "Seada", "badge": "Patrimonio de la isla de Sardegna", "description": "Masa tipo hojaldre, pecorino, naranja, limón, miel orgánica.", "prices": [{ "amount": 20000 }] },
+        { "id": "crema-algherese", "name": "Crema algherese", "description": "Crema de vainas de vainilla de Madagascar, costra de azúcar flambé.", "prices": [{ "amount": 19000 }] },
+        { "id": "pannacotta-duo", "name": "Pannacotta dúo", "description": "Coco, coulis de frambuesa, menta.", "prices": [{ "amount": 19000 }] },
+        { "id": "sfogliatella-duo", "name": "Sfogliatella dúo", "description": "Hojaldre crocante, crema pastelera, azúcar impalpable.", "prices": [{ "amount": 19000 }] }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "items": [
+        { "id": "san-pellegrino-acqua-panna", "name": "San Pellegrino | Acqua Panna", "prices": [{ "amount": 12000 }] },
+        { "id": "agua-mineral", "name": "Agua mineral", "description": "Línea Villavicencio", "prices": [{ "amount": 6000 }] },
+        { "id": "agua-saborizada", "name": "Agua saborizada", "description": "Línea Levité", "prices": [{ "amount": 6000 }] },
+        { "id": "gaseosa", "name": "Gaseosa", "description": "Línea Coca-Cola", "prices": [{ "amount": 6000 }] },
+        { "id": "vino-por-copa", "name": "Vino por copa", "description": "Consultar por variedad y estilo.", "prices": [{ "amount": 12000 }] }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails",
+      "items": [
+        { "id": "green-tonic", "name": "Green Tonic", "description": "Limón, manzana verde, albahaca, menta, jarabe, tónica.", "prices": [{ "amount": 12000 }] },
+        { "id": "fiore-rosso", "name": "Fiore Rosso", "description": "Hibiscus, limón, jarabe, soda.", "prices": [{ "amount": 12000 }] },
+        { "id": "patagonia-sour", "name": "Patagonia Sour", "description": "Frutos rojos, limón, jarabe.", "prices": [{ "amount": 12000 }] },
+        { "id": "lemon-ginger", "name": "Lemon Ginger", "description": "Limón, jengibre, menta, jarabe.", "prices": [{ "amount": 12000 }] }
+      ]
+    },
+    {
+      "id": "cervezas",
+      "name": "Cervezas",
+      "items": [
+        { "id": "cerveza", "name": "Cerveza 330 ml", "variants": ["Heineken Longneck", "Heineken 0 Alcohol", "Blue Moon Belgian White"], "prices": [{ "amount": 10000 }] },
+        { "id": "cerveza-italiana", "name": "Cerveza italiana 330 ml", "variants": ["Peroni Nastro Azzurro", "Menabrea Bionda Lager", "Menabrea Ambrata Amber"], "prices": [{ "amount": 12000 }] }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "items": [
+        { "id": "branca-cola", "name": "Branca Cola", "description": "Fernet Branca, Coca Cola.", "prices": [{ "amount": 15000 }] },
+        { "id": "carpano-cup", "name": "Carpano Cup", "description": "Vermouth Carpano Rosso, Spirito Blue Gin, gaseosa lima limón.", "prices": [{ "amount": 15000 }] },
+        { "id": "carpano-orange", "name": "Carpano Orange", "description": "Vermouth Carpano Rosso, soda.", "prices": [{ "amount": 15000 }] },
+        { "id": "carpano-negroni", "name": "Carpano Negroni", "description": "Spirito Blue Gin, Vermouth Carpano Rosso, bitter rojo.", "prices": [{ "amount": 18000 }] },
+        { "id": "caipi-de-verano", "name": "Caipi de verano", "description": "Vodka Sernova Caribbean Blend, limón, lima.", "prices": [{ "amount": 16000 }] },
+        { "id": "blue-gin-tonic", "name": "Blue Gin Tonic", "description": "Spirito Blue Gin, tónica.", "prices": [{ "amount": 16000 }] },
+        { "id": "blue-collins", "name": "Blue Collins", "description": "Spirito Blue Gin, limón, soda.", "prices": [{ "amount": 16000 }] },
+        { "id": "blue-basil-smash", "name": "Blue Basil Smash", "description": "Spirito Blue Gin, albahaca, lima.", "prices": [{ "amount": 16000 }] },
+        { "id": "espresso-martini", "name": "Espresso Martini", "description": "Sernova Vodka, café espresso, Café Borghetti, almíbar.", "prices": [{ "amount": 19000 }] },
+        { "id": "aperol-spritz", "name": "Aperol Spritz", "description": "Aperol, Cinzano Demi Sec, soda.", "prices": [{ "amount": 17000 }] },
+        { "id": "campari-spritz", "name": "Campari Spritz", "description": "Campari, Cinzano Demi Sec, soda.", "prices": [{ "amount": 17000 }] },
+        { "id": "campari-tonic", "name": "Campari Tonic", "description": "Campari, tónica, limón.", "prices": [{ "amount": 15000 }] },
+        { "id": "americano", "name": "Americano", "description": "Campari, Vermouth Rosso, soda.", "prices": [{ "amount": 16000 }] },
+        { "id": "boulevardier", "name": "Boulevardier", "description": "Bourbon whiskey, Vermouth Rosso, Campari.", "prices": [{ "amount": 18000 }] },
+        { "id": "mi-to", "name": "Mi-To", "description": "Campari, Vermouth Rosso.", "prices": [{ "amount": 16000 }] },
+        { "id": "negroni-sbagliato", "name": "Negroni Sbagliato", "description": "Bitter Campari, Vermouth Rosso, espumante.", "prices": [{ "amount": 17000 }] },
+        { "id": "ramazzotti-tonic", "name": "Ramazzotti Tonic", "description": "Ramazzotti Rosato, tónica, limón.", "prices": [{ "amount": 16000 }] },
+        { "id": "ramazzotti-spritz", "name": "Ramazzotti Spritz", "description": "Ramazzotti Rosato, espumante extra brut, limón.", "prices": [{ "amount": 16000 }] },
+        { "id": "old-fashioned", "name": "Old Fashioned", "description": "Bourbon whiskey, azúcar, angostura, naranja.", "prices": [{ "amount": 18000 }] },
+        { "id": "manhattan", "name": "Manhattan", "description": "Bourbon whiskey, Vermouth Rosso, angostura.", "prices": [{ "amount": 18000 }] }
+      ]
+    },
+    {
+      "id": "vinos-de-la-casa",
+      "name": "Microvinificaciones de la casa",
+      "note": "Pequeñas partidas, alma artesanal. Microvinificaciones exclusivas para nuestro restaurante. No lo vas a encontrar en otro lugar: disfrutalo y compartilo.",
+      "items": [
+        { "id": "logudoro-cabernet-franc", "name": "Bottega Logudoro – Cabernet Franc", "description": "Cabernet Franc, uvas de Gualtallary.", "prices": [], "available": false },
+        { "id": "logudoro-chenin-orange", "name": "Bottega Logudoro – Chenin Orange", "description": "Naranjo de Chenin Blanc, uvas de Tunuyán.", "prices": [{ "amount": 25000 }] },
+        { "id": "logudoro-nebbiolo", "name": "Bottega Logudoro – Nebbiolo", "description": "Nebbiolo, uvas de Tunuyán.", "prices": [], "available": false }
+      ]
+    },
+    {
+      "id": "burbujas",
+      "name": "Burbujas",
+      "items": [
+        { "id": "cinzano-to-spritz", "name": "Cinzano – To Spritz Demi Sec", "description": "Glera, Garganega, Veneto, Italia.", "prices": [{ "amount": 35000 }] },
+        { "id": "casa-tano-pet-nat-pinot", "name": "Casa Tano al Compás – Pinot Noir Pet Nat Método Ancestral 2023", "description": "Pinot Noir, Godoy Cruz, Mendoza.", "prices": [{ "amount": 38500 }] },
+        { "id": "casa-tano-pet-nat-chardonnay", "name": "Casa Tano al Compás – Chardonnay Pet Nat Método Ancestral 2024", "description": "Chardonnay, Godoy Cruz, Mendoza.", "prices": [{ "amount": 38500 }] },
+        { "id": "freixenet-cordon-negro", "name": "Freixenet – Cava Cordón Negro", "description": "Parellada, Macabeu, Xarel-lo, España.", "prices": [{ "amount": 44000 }] },
+        { "id": "freixenet-italian-rose", "name": "Freixenet – Italian Rosé", "description": "Pinot Noir, Glera, Veneto, Italia.", "prices": [{ "amount": 66000 }] },
+        { "id": "colvendra-prosecco-rose", "name": "Colvendra – Prosecco Rosé DOC Brut Millesimato", "description": "Pinot Noir, Glera, Veneto, Italia.", "prices": [{ "amount": 77000 }] },
+        { "id": "colvendra-gran-brut", "name": "Colvendra – Gran Brut Prosecco Superiore Conegliano Valdobbiadene DOCG", "description": "Glera, Veneto, Italia.", "prices": [{ "amount": 82000 }] }
+      ]
+    },
+    {
+      "id": "blancos",
+      "name": "Blancos",
+      "items": [
+        { "id": "flichman-sauvignon", "name": "Finca Flichman – Estate Sauvignon Blanc 2024", "description": "Sauvignon Blanc, Mendoza.", "prices": [{ "amount": 25000 }] },
+        { "id": "flichman-chardonnay-dulce", "name": "Finca Flichman – Estate Chardonnay Bajo Alcohol Dulce 2024", "description": "Chardonnay bajo alcohol dulce, Mendoza.", "prices": [{ "amount": 25000 }] },
+        { "id": "crios-sustentia", "name": "Susana Balbo Wines – Crios Sustentia Chardonnay Bajo Alcohol 2024", "description": "Chardonnay bajo alcohol, Valle de Uco, Mendoza.", "prices": [{ "amount": 25000 }] },
+        { "id": "antiguo-legado-blanco", "name": "Antiguo Legado – Pinot Noir Blanco Oceánico", "description": "Pinot Noir, Paraje Macedo, Madariaga, Buenos Aires.", "prices": [{ "amount": 28000 }] },
+        { "id": "miraluna-ekeko-blanco", "name": "Miraluna – Ekeko 2024", "description": "Blend de Torrontés, Sauvignon Blanc, Cachi, Salta.", "prices": [{ "amount": 35000 }] },
+        { "id": "cara-sur-pergolas-blanco", "name": "Cara Sur – Pérgolas Criollas Blanco 2023", "description": "Torrontés Sanjuanino, Torrontés Mendocino, Moscatel, Valle de Calingasta, San Juan.", "prices": [{ "amount": 35000 }] },
+        { "id": "enorgullecida", "name": "Paula Michelini – Enorgullecida 2023", "description": "Criollas con maceración con pieles, Tupungato, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "esperando-barbaros-blanco", "name": "Passionate Wine – Esperando Los Bárbaros 2024", "description": "Sauvignon Blanc, Semillón, Tupungato, Valle de Uco, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "dona-paula-riesling", "name": "Doña Paula – Single Vineyard Riesling Finca Aluvia 2024", "description": "Riesling, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "electrico-blanco", "name": "Viña Los Chocos – Eléctrico Blanco 2024", "description": "Chardonnay, Sauvignon Blanc, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 44000 }] },
+        { "id": "chica-del-dragon", "name": "Paula Michelini – La Chica del Dragón 2024", "description": "Pedro Ximénez, Tupungato, Mendoza.", "prices": [{ "amount": 50000 }] },
+        { "id": "benmarco-sin-limites", "name": "Susana Balbo Wines – Benmarco Sin Límites Chardonnay", "description": "Chardonnay, Tupungato, Valle de Uco, Mendoza.", "prices": [{ "amount": 55000 }] },
+        { "id": "montesco-agua-de-roca", "name": "Matías Michelini – Montesco Agua de Roca", "description": "Sauvignon Blanc, San Pablo, Tunuyán, Mendoza.", "prices": [{ "amount": 66000 }] },
+        { "id": "gualjaina-gewurztraminer", "name": "Cielos de Gualjaina – Gewürztraminer 2023", "description": "Gewürztraminer, Meseta Central, Chubut. Agricultura y enología biodinámica.", "prices": [{ "amount": 90000 }] },
+        { "id": "gualjaina-corniola", "name": "Cielos de Gualjaina – Corniola Bianca 2023", "description": "Corniola bianca, Meseta Central, Chubut. Agricultura y enología biodinámica.", "prices": [{ "amount": 90000 }] },
+        { "id": "michelini-caos", "name": "Matías Michelini – Caos 2021", "description": "Chardonnay, Tupungato, Mendoza.", "prices": [{ "amount": 120000 }] },
+        { "id": "michelini-solido", "name": "Matías Michelini – Sólido 2021", "description": "Blend de Semillón, Sauvignon Blanc, Tupungato, Mendoza.", "prices": [{ "amount": 120000 }] }
+      ]
+    },
+    {
+      "id": "naranjos",
+      "name": "Naranjos",
+      "items": [
+        { "id": "cara-sur-naranjo", "name": "Cara Sur – Naranjo 2023", "description": "Torrontés Sanjuanino, Torrontés Mendocino, Valle de Calingasta, San Juan.", "prices": [{ "amount": 38000 }] },
+        { "id": "casa-tano-naranjo", "name": "Casa Tano Vino por el Arte – Naranjo 2024", "description": "Sauvignon Blanc, Moscatel de Alejandría, Chardonnay, Gualtallary, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "torrontes-brutal", "name": "Passionate Wines – Torrontés Brutal 2023", "description": "Torrontés, Tupungato, Valle de Uco, Mendoza.", "prices": [{ "amount": 44000 }] },
+        { "id": "pielihueso-naranjo", "name": "Pielihueso – Naranjo 2024", "description": "Torrontés, Sauvignon Blanc, Chardonnay, Los Chacayes, Mendoza.", "prices": [{ "amount": 48000 }] },
+        { "id": "pielihueso-naranjo-magnum", "name": "Pielihueso – Naranjo 2024 Magnum 1.5 L", "description": "Torrontés, Sauvignon Blanc, Chardonnay, Los Chacayes, Mendoza.", "prices": [{ "amount": 95000 }] },
+        { "id": "pielihueso-naranjo-anfora", "name": "Pielihueso – Naranjo de Ánfora 2022", "description": "Torrontés, Sauvignon Blanc, Chardonnay, Los Chacayes, Mendoza.", "prices": [{ "amount": 60000 }] }
+      ]
+    },
+    {
+      "id": "rosados",
+      "name": "Rosados",
+      "items": [
+        { "id": "antiguo-legado-rose", "name": "Antiguo Legado – Pinot Noir Rosé Oceánico 2024", "description": "Pinot Noir, Paraje Macedo, Madariaga, Buenos Aires.", "prices": [{ "amount": 28000 }] },
+        { "id": "antiguo-legado-clarette", "name": "Antiguo Legado – Pinot Noir Clarette Oceánico 2024", "description": "Pinot Noir, Paraje Macedo, Madariaga, Buenos Aires.", "prices": [{ "amount": 28000 }] },
+        { "id": "pielihueso-claranjo", "name": "Pielihueso – Claranjo 2025", "description": "Cabernet Sauvignon, Malbec, Torrontés, Tunuyán, Valle de Uco, Mendoza.", "prices": [{ "amount": 30000 }] },
+        { "id": "cara-sur-pergolas-tintas", "name": "Cara Sur – Pérgolas Criollas Tintas 2024", "description": "Cereza, Canela, Criolla Grande, Valle de Calingasta, San Juan.", "prices": [{ "amount": 35000 }] },
+        { "id": "electrico-rosado", "name": "Viña Los Chocos – Eléctrico Rosado 2024", "description": "Pinot Noir, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 39000 }] },
+        { "id": "cara-sur-rosado", "name": "Cara Sur – Rosado 2023", "description": "Field blend de Bonarda, Syrah, Paraje Hilario, Valle de Calingasta, San Juan.", "prices": [{ "amount": 39000 }] },
+        { "id": "casa-tano-clarette", "name": "Casa Tano Vinos por el Arte – Clarette 2023", "description": "Criolla Grande, Moscatel de Alejandría, Garnacha, Valle de Uco, Mendoza.", "prices": [{ "amount": 39000 }] },
+        { "id": "pielihueso-rosado-primero", "name": "Pielihueso – Rosado Primero 2023", "description": "Petit Verdot, Chacayes, Valle de Uco, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "livvera-sangiovese-rose", "name": "Escala Humana – Livvera Sangiovese Rosé 2023", "description": "Sangiovese, San José, Valle de Uco, Mendoza.", "prices": [{ "amount": 38000 }] },
+        { "id": "pielilopez-rosado", "name": "Pielihueso y Bodegas López – Pielilopez Rosado 2023", "description": "Malbec, Cabernet Sauvignon, Petit Verdot, Los Sauces, Valle de Uco, Mendoza.", "prices": [{ "amount": 48000 }] }
+      ]
+    },
+    {
+      "id": "tintos-cuerpo-medio",
+      "name": "Tintos de cuerpo medio",
+      "items": [
+        { "id": "ascendientes", "name": "Viticultores de Montaña – Ascendientes 2023", "description": "Cabernet Franc, Malbec, Villa Seca, Tunuyán, Mendoza.", "prices": [{ "amount": 35000 }] },
+        { "id": "cara-sur-field-blend", "name": "Cara Sur – Field Blend de Uvas Tintas Italianas 2022", "description": "Barbera, Cardin, Freisa, Veronese, Bonarda, Greco Nero, Valle de Calingasta, San Juan.", "prices": [{ "amount": 35000 }] },
+        { "id": "pielihueso-los-sauces", "name": "Pielihueso – Tinto Los Sauces 2024", "description": "Cabernet Sauvignon, Malbec, Valle de Uco, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "pielihueso-gallo-clara", "name": "Pielihueso – El Gallo Clara 2022", "description": "Blend de Cabernet Sauvignon, Torrontés, Chardonnay, Sauvignon Blanc, Valle de Uco, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "cono-sur-pinot", "name": "Cono Sur – Reserva Especial Pinot Noir 2022", "description": "Pinot Noir, Valle de San Antonio, Chile.", "prices": [{ "amount": 36000 }] },
+        { "id": "casa-tano-syrah", "name": "Casa Tano Vino por el Arte – Maceración Carbónica Syrah 2025", "description": "Syrah, Región Campo de los Andes, Tunuyán, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "bacan-merlot", "name": "La Giostra del Vino – Bacán Merlot 2022", "description": "Merlot, Luján de Cuyo, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "via-revolucionaria-garnacha", "name": "Matías Michelini – Vía Revolucionaria Garnacha", "description": "Garnacha, Cordón del Plata, Tupungato, Valle de Uco, Mendoza.", "prices": [{ "amount": 40000 }] },
+        { "id": "vertebrado", "name": "Viña Los Chocos – Vertebrado 2023", "description": "Pinot Noir, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 44000 }] },
+        { "id": "livvera-sangiovese", "name": "Escala Humana – Livvera Sangiovese 2023", "description": "Sangiovese tinto, San José, Valle de Uco, Mendoza.", "prices": [{ "amount": 44000 }] },
+        { "id": "livvera-bequignol", "name": "Escala Humana – Livvera Bequignol 2023", "description": "Bequignol, El Zampal, Valle de Uco, Mendoza.", "prices": [{ "amount": 48000 }] },
+        { "id": "descendientes", "name": "Viticultores de Montaña – Descendientes 2023", "description": "Cabernet Franc, Villa Seca, Tunuyán, Mendoza.", "prices": [{ "amount": 60000 }] },
+        { "id": "montesco-punta-negra", "name": "Matías Michelini – Montesco Punta Negra 2023", "description": "Pinot Noir, San Pablo, Tunuyán, Valle de Uco, Mendoza.", "prices": [{ "amount": 70000 }] }
+      ]
+    },
+    {
+      "id": "tintos-con-cuerpo",
+      "name": "Tintos con cuerpo",
+      "items": [
+        { "id": "pielihueso-villa-seca", "name": "Pielihueso – Tinto Villa Seca 2023", "description": "Merlot 100% semicarbónico, Valle de Uco, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "puercovin-malbec", "name": "La Giostra del Vino – Puercovin Puercoespín Malbec 2024", "description": "Malbec, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "puercovin-cabernet-franc", "name": "La Giostra del Vino – Puercovin Puercoespín Cabernet Franc 2024", "description": "Cabernet Franc, Perdriel, Luján de Cuyo, Mendoza.", "prices": [{ "amount": 36000 }] },
+        { "id": "miraluna-ekeko-tinto", "name": "Miraluna – Ekeko 2023", "description": "Malbec, Merlot, Cachi, Salta.", "prices": [{ "amount": 36000 }] },
+        { "id": "electrico-malbec", "name": "Viña Los Chocos – Eléctrico Malbec 2022", "description": "Malbec, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 40000 }] },
+        { "id": "miraluna-malbec", "name": "Miraluna – Malbec 2021", "description": "Malbec, Cachi, Salta.", "prices": [{ "amount": 40000 }] },
+        { "id": "esperando-barbaros-malbec", "name": "Passionate Wine – Esperando Los Bárbaros 2024", "description": "Malbec, Tupungato, Valle de Uco, Mendoza.", "prices": [{ "amount": 40000 }] },
+        { "id": "livvera-malbec", "name": "Escala Humana – Livvera Malbec 2023", "description": "Malbec, Gualtallary, Valle de Uco, Mendoza.", "prices": [{ "amount": 44000 }] },
+        { "id": "miraluna-merlot", "name": "Miraluna – Merlot 2022", "description": "Merlot, Cachi, Salta.", "prices": [{ "amount": 66000 }] },
+        { "id": "giostra-nebbia", "name": "La Giostra del Vino – Nebbia 2023", "description": "Nebbiolo, Perdriel, Luján de Cuyo, Mendoza.", "prices": [{ "amount": 70000 }] },
+        { "id": "miraluna-parcela-cachi", "name": "Miraluna – Parcela Cachi Reserva 2020", "description": "Malbec, Cachi, Salta.", "prices": [{ "amount": 80000 }] },
+        { "id": "gran-enemigo-gualtallary", "name": "El Enemigo – Gran Enemigo Gualtallary 2019", "badge": "100 pts Parker", "description": "Cabernet Franc, Gualtallary, Mendoza.", "prices": [{ "amount": 90000 }] },
+        { "id": "vortex-malbec", "name": "Matías Michelini – Vortex Malbec 2021", "description": "Malbec, San Pablo, Mendoza.", "prices": [{ "amount": 190000 }] },
+        { "id": "sitio-la-romain", "name": "Matías Michelini – Sitio La Romain Malbec 2021", "description": "Malbec, La Cautiva, Gualtallary, Mendoza.", "prices": [{ "amount": 240000 }] }
+      ]
+    },
+    {
+      "id": "vini-italiani",
+      "name": "Vini Italiani",
+      "items": [
+        { "id": "vi-freixenet-italian-rose", "name": "Freixenet – Italian Rosé", "description": "Pinot Noir, Glera, Veneto, Italia.", "prices": [{ "amount": 66000 }] },
+        { "id": "vi-colvendra-prosecco-rose", "name": "Colvendra – Prosecco Rosé DOC Brut Millesimato", "description": "Pinot Noir, Glera, Veneto, Italia.", "prices": [{ "amount": 77000 }] },
+        { "id": "vi-colvendra-gran-brut", "name": "Colvendra – Gran Brut Prosecco Superiore Conegliano Valdobbiadene DOCG", "description": "Glera, Veneto, Italia.", "prices": [{ "amount": 95000 }] },
+        { "id": "dolcetto-dalba", "name": "Marchesi di Barolo – Dolcetto d'Alba Madonna del Dono DOC 2021", "description": "Dolcetto, Piemonte, Italia.", "prices": [{ "amount": 66000 }] },
+        { "id": "barbera-dasti", "name": "Marchesi di Barolo – Barbera d'Asti DOC 2021", "description": "Barbera, Piemonte, Italia.", "prices": [{ "amount": 72000 }] },
+        { "id": "barolo-tradizione", "name": "Marchesi di Barolo – Barolo della Tradizione DOCG 2018", "description": "Nebbiolo, Piemonte, Italia.", "prices": [{ "amount": 160000 }] },
+        { "id": "romitoro", "name": "Castello Romitorio – RomiToro IGT Toscana 2018", "description": "Petit Verdot, Syrah, Toscana, Italia.", "prices": [{ "amount": 85000 }] },
+        { "id": "brunello-montalcino", "name": "Castello Romitorio – Brunello di Montalcino DOCG 2015", "description": "Sangiovese, Toscana, Italia.", "prices": [{ "amount": 220000 }] }
+      ]
+    }
+  ]
+}
