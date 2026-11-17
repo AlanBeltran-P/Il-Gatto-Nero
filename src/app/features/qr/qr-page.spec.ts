@@ -34,23 +34,25 @@ describe('QrPage', () => {
     return { fixture, element: fixture.nativeElement as HTMLElement };
   }
 
-  it('genera el QR con la URL del menú', () => {
+  it('genera el QR con la URL pública del menú (Vercel), aunque se abra desde otro lado', () => {
     const { fixture } = render();
     const qr = fixture.debugElement.query((node) => node.name === 'qrcode');
-    expect((qr.componentInstance as QrCodeStub).qrdata()).toBe(`${location.origin}/`);
+    expect((qr.componentInstance as QrCodeStub).qrdata()).toBe(
+      'https://il-gatto-nero-sooty.vercel.app/',
+    );
   });
 
   it('muestra el llamado a escanear y la URL corta', () => {
     const { element } = render();
     expect(element.querySelector('.qr-card__cta')?.textContent).toBe('Escaneá para ver la carta');
-    expect(element.querySelector('.qr-card__url')?.textContent).toBe(location.host);
+    expect(element.querySelector('.qr-card__url')?.textContent).toBe(
+      'il-gatto-nero-sooty.vercel.app',
+    );
   });
 
-  it('avisa cuando el QR apunta a localhost', () => {
+  it('no muestra el aviso de localhost porque apunta a la URL pública', () => {
     const { element } = render();
-    expect(element.querySelector('.qr-page__warning')?.textContent).toContain(
-      'solo funciona en esta computadora',
-    );
+    expect(element.querySelector('.qr-page__warning')).toBeNull();
   });
 
   it('muestra el botón de descarga cuando el QR está generado', () => {
